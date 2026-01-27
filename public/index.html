@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>OnseiMemoAggregation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =========================
+         1行目：操作ボタン
+    ========================== -->
+    <div id="toolbar-top">
+        <input type="file" id="fileInput" multiple accept=".txt">
+        <button id="clearButton">クリア</button>
+        <button id="exportButton">ファイル出力</button>
+    </div>
+
+    <!-- =========================
+         2行目：メモ編集
+    ========================== -->
+    <div id="editor-area">
+        <textarea id="memoEditor" placeholder="メモ本文を編集"></textarea>
+        <button id="saveMemoButton">保存</button>
+    </div>
+
+    <!-- =========================
+         3行目：検索
+    ========================== -->
+    <div id="search-area">
+        <input type="text" id="searchInput" placeholder="検索文字">
+        <button id="searchButton">検索</button>
+        <button id="allOffButton">全オフ</button>
+    </div>
+
+    <!-- =========================
+         4行目：表示切替
+    ========================== -->
+    <div id="filter-area">
+        <label>
+            <input type="radio" name="displayFilter" value="all" checked>
+            全データ表示
+        </label>
+        <label>
+            <input type="radio" name="displayFilter" value="checked">
+            チェックのみ表示
+        </label>
+        <label>
+            <input type="radio" name="displayFilter" value="unchecked">
+            チェック以外表示
+        </label>
+    </div>
+
+    <!-- =========================
+         メモ一覧表示
+    ========================== -->
+    <div id="memo-list"></div>
+
+    <!-- =========================
+         JavaScript
+    ========================== -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
