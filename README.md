@@ -407,6 +407,9 @@ OnseiMemoAggregation/
 をすべて兼ねています。
 
 
+## 公開URL
+https://kc15hs.github.io/OnseiMemoAggregation/
+
 
 
 
