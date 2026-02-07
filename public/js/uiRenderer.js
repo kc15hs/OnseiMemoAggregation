@@ -8,6 +8,7 @@ export function renderMemoList(memos) {
     list.innerHTML = '';
 
     memos.forEach(m => {
+        const isStar = m.memo && m.memo.startsWith('★');
         const row = document.createElement('div');
         row.className = 'memo-row';
         row.dataset.id = m.id;
@@ -66,6 +67,10 @@ export function renderMemoList(memos) {
         text.addEventListener('touchstart', startPress, { passive: true });
         text.addEventListener('touchend', cancelPress);
         text.addEventListener('touchmove', cancelPress);
+
+        if (isStar) {
+            row.style.color = 'red';
+        }
 
         row.append(cb, dtEl, text);
         list.appendChild(row);
